@@ -22,6 +22,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => 'auth'], function(){
 	Route::get('/student/store', 'HomeController@save');
+  Route::get('/student/storeedit', 'HomeController@saveedit');
+  Route::get('/courses/get', 'HomeController@getCourses');
+  Route::get('/student/getbyId', 'HomeController@getbyId');
 
 
 });
